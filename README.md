@@ -12,7 +12,7 @@ In this TER project, we will develop, using AI-driven HPC software development, 
 
 * At the beginning of each week's session, I would like to have each group a mini talk/presentation of 5-6 minutes, sharing their experience regarding their work in the previous week. This will be an informal exchange; you do not need a polished talk or slides. Talking points: what worked, what did not work, challenges faced, how managed to overcome, etc. This will also give you little bouts of storyline for your final presentation and report.
 
-* After the presentations, I will go to each group and discuss the week's work, inspect the code, prompts, results, and give guidance for further development.
+* After the presentations, I will talk with each group and discuss the week's work, inspect the code, prompts, results, and give guidance for further development.
 
 ## Week 1: Getting started with Antigravity and tiled matrix multiplication (13/03)
 
