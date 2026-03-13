@@ -14,7 +14,7 @@ In this TER project, we will develop, using AI-driven HPC software development, 
 
 * After the presentations, I will talk with each group and discuss the week's work, inspect the code, prompts, results, and give guidance for further development.
 
-## Week 1: Getting started with Antigravity and tiled matrix multiplication (13/03)
+## Week 1: Getting started with Antigravity and tiled matrix multiplication SGEMM (13/03)
 
 Goals for the week
 
