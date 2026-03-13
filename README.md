@@ -73,7 +73,7 @@ Your course grade will be calculated as follows:
 
 * Since all of you will be sharing a single machine, it is important to make a fair use of the CPU resources. In particular, try to optimize the single threaded version of the code first. Once it is efficient, you can run the multi-core benchmarks. For multi-core benchmarks, limit the thread count to 8 for most runs. Once you have a production-ready code, you can benchmark up to 16 threads.
 * When using Antigravity, try to use the Gemini Flash model as much as possible; it is remarkably good and you have much higher credit limit. You can save Gemini Pro credits for more critical optimization/organization/code generation tasks. Your credit limit resets about every 4 hours.
-
+* Divide a task into many subtasks as much as possible; this will facilitate the work for the AI and make it use less compute time / credit.
 # References
 
 * https://github.com/OpenMathLib/OpenBLAS
