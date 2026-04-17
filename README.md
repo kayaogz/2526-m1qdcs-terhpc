@@ -58,15 +58,25 @@ Goals for the week
 
 * Aim to have a good implementation plan for one of the kernels, which should give a good baseline for other kernels since they all have similarities.
 
-* You can assume incX and incY are both 1 for simplicity.
+* You can assume incX and incY are both 1 for simplicity. If you desire you can also cover the cases with incX or incY >1.
 
-* Make sure the signature of all your function exactly follows Fortran BLAS signature (sscal(...)) as you will later put all these into a library that will replace OpenBLAS in benchmark tests.
+* Make sure the signature of all your function exactly follows Fortran BLAS signature (sscal_(...)) and not CBLAS signature (cblas_sscal(...)) as you will later put all these into a library that will replace OpenBLAS in benchmark tests.
 
 * Create a tester that automatically generates many test cases for each kernel (including edge/patological cases) and tests them thoroughly, by comparing against OpenBLAS.
 
 ## Week 5: BLAS 2 kernels (only s???? type, excluding strided versions) (17/04)
 
+* Generate optimized AVX2 kernels for: sgemv, ssymv, strmv, strsv, sger, ssyr, ssyr2
+
+* Add task-based parallelism as before.
+
+* You can assume incX and incY are both 1 for simplicity. If you desire you can also cover the cases with incX or incY >1.
+
+* Make sure the signature of all your function exactly follows Fortran BLAS signature (sgemv_(...)) and not CBLAS signature (cblas_sgemv(...)) as you will later put all these into a library that will replace OpenBLAS in benchmark tests.
+
 ## Week 6: Other BLAS 3 kernels (trsm, syrk, trmm) (tentative) (24/04)
+
+* If you are motivated, you can also optionally try to generate optimized kernels for strsm, ssyrk, and/or strmm.
 
 ## Week 7: TER Presentations (date to be announced later)
 
@@ -78,8 +88,9 @@ Your course grade will be calculated as follows:
 1. Project implementation
 * You should send your completed lab assignment completed to my university mail (oguz.kaya[at]universite-paris-saclay.fr) with subject line "M1QDCSTERHPC PROJECT Firstname1 LASTNAME1 Firstname2 LASTNAME2" (e.g., M1QDCSTERHPC PROJECT Jean-François DURAND Julie DUFONT).
 * In your e-mail, please attach all your project content in a single .zip file (and make sure it does not exceed 20MB).
+* Keep all your files as-is in the home folder of your account in the remote machine; I will be accessing and using it as well.
 * If you have a partner/binome for the lab assignment, please send me **one e-mail per group**.
-* You should send your work no later than **30/04 Thursday 23:59:59**
+* You should send your work no later than **08/05 Friday 23:59:59**
 
 2. Project report
 * You will write a 20-30 page report on your implementation. There is no fixed format, but make sure to use 11pt policy, single column page format, margins no less than 2cms.
@@ -88,7 +99,7 @@ Your course grade will be calculated as follows:
 * For each BLAS kernel (or group of kernels), I would like to see the approaches you tried (and succeeded/failed) using AI-driven development. What worked, what did not work, how much improvement did you get applying each optimization, when did AI failed so you had to intervene, when it succeded, etc.
 * Experimental section that compares your code's performance to OpenBLAS library
 * You should send your completed lab assignment completed to my university mail (oguz.kaya[at]universite-paris-saclay.fr) with subject line "M1QDCSTERHPC REPORT Firstname1 LASTNAME1 Firstname2 LASTNAME2" (e.g., M1QDCSTERHPC REPORT Jean-François DURAND Julie DUFONT).
-* You should send your work no later than **30/04 Thursday 23:59:59**
+* You should send your work no later than **08/05 Friday 23:59:59**
 
 3. Project presentation
 * Project presentations will take place together with other individual TER projects, sometime in May. You will receive an e-mail from the TER coordinator (Pablo Arnault) regarding this.
