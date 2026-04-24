@@ -86,7 +86,7 @@ Goals for the week
 Your course grade will be calculated as follows:
 
 1. Project implementation
-* You should send your completed lab assignment completed to my university mail (oguz.kaya[at]universite-paris-saclay.fr) with subject line "M1QDCSTERHPC PROJECT Firstname1 LASTNAME1 Firstname2 LASTNAME2" (e.g., M1QDCSTERHPC PROJECT Jean-François DURAND Julie DUFONT).
+* You should send your completed project to my university mail (oguz.kaya[at]universite-paris-saclay.fr) with subject line "M1QDCSTERHPC PROJECT Firstname1 LASTNAME1 Firstname2 LASTNAME2" (e.g., M1QDCSTERHPC PROJECT Jean-François DURAND Julie DUFONT).
 * In your e-mail, please attach all your project content in a single .zip file (and make sure it does not exceed 20MB).
 * Keep your home folder in the remote machine **as is** reflecting the final version of your project. I will connect to your workspace with my agents and do some fun stuff!
 * Make sure to include a Makefile that can compile all BLAS1/2/3 kernels you generated into a library files (.a and .so). Your kernels must be **100% compatible with Fortran BLAS interface**; in other words, you should be able to link the same GEMM test executuble to your library or OpenBLAS library with no modification in the code itself.
