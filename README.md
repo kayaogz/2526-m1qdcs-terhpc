@@ -88,7 +88,8 @@ Your course grade will be calculated as follows:
 1. Project implementation
 * You should send your completed lab assignment completed to my university mail (oguz.kaya[at]universite-paris-saclay.fr) with subject line "M1QDCSTERHPC PROJECT Firstname1 LASTNAME1 Firstname2 LASTNAME2" (e.g., M1QDCSTERHPC PROJECT Jean-François DURAND Julie DUFONT).
 * In your e-mail, please attach all your project content in a single .zip file (and make sure it does not exceed 20MB).
-* Keep all your files as-is in the home folder of your account in the remote machine; I will be accessing and using it as well.
+* Keep your home folder in the remote machine **as is** reflecting the final version of your project. I will connect to your workspace with my agents and do some fun stuff!
+* Make sure to include a Makefile that can compile all BLAS1/2/3 kernels you generated into a library files (.a and .so). Your kernels must be **100% compatible with Fortran BLAS interface**; in other words, you should be able to link the same GEMM test executuble to your library or OpenBLAS library with no modification in the code itself.
 * If you have a partner/binome for the lab assignment, please send me **one e-mail per group**.
 * You should send your work no later than **08/05 Friday 23:59:59**
 
@@ -96,15 +97,34 @@ Your course grade will be calculated as follows:
 * You will write a 20-30 page report on your implementation. There is no fixed format, but make sure to use 11pt policy, single column page format, margins no less than 2cms.
 * The report should ideally contain following points:
 * A short introduction outlining the project goals and background (no more than 3 pages).
-* For each BLAS kernel (or group of kernels), I would like to see the approaches you tried (and succeeded/failed) using AI-driven development. What worked, what did not work, how much improvement did you get applying each optimization, when did AI failed so you had to intervene, when it succeded, etc.
-* Experimental section that compares your code's performance to OpenBLAS library
+* You should have a section dedicated to your work on each BLAS group (GEMM/BLAS 3, BLAS1, BLAS2).
+* For each BLAS kernel (or group of kernels), your overall goal should be show the approaches you tried (and succeeded/failed) using AI-driven development. What worked, what did not work, how much improvement did you get applying each optimization, when did AI failed so you had to intervene, when it succeded, etc. **Test one thing at a time** for a controlled experiment.
+* For GEMM, you should also have a subsection on parameter optimization / autotuning approaches you tried. Try 3 different algorithms, and show a plot with #iters/trials (x axis) vs peak flops (y axis) with one curve per algorithm.
+* For BLAS1/BLAS2 kernels, explain your efforts in generating a bunch of kernels collectively using AI, and how you iterated to reach the final versions.
+* For your plots, group them together to save space (e.g., 3 square plots can fit side-by-side in a row). When making plots smaller, make sure the font size is large enough to be legible.
+* You should have a separate section for testing. In all BLAS1/2/3 cases, you should generate test instances for your kernels, and have an automated testbench that can thouroughly validate all your implementations. Do not provide test results (since all should be passing); rather explain your methodology for creating test cases and test scripts.
+* In each section, you should provide experiments that compares your code's performance to previous (non-optimized) versions of your own code as well as the OpenBLAS library. It is also a good idea to provide the percentage of machine peak you achieve (single-core peak for single threaded runs, k-core peak for k-threaded runs, etc.). When you are slower than OpenBLAS, try to explain why. When you beat OpenBLAS, analyze the code/results and explain the reason similarly.
+* In the conclusion section, provide an overall summary of your experience in this project with AI tools. In what way was it useful and made the life easier? What were still painful, what features would you wish to have? Did this accelerate your learning and creativity, or do you think that it made you more passive and observant? Tell me all about your reflections and feelings in this direction.
+* It is OK to generate parts of your report using AI; just make sure you know what you are doing! Do not submit some AI-generated slop.
 * You should send your completed lab assignment completed to my university mail (oguz.kaya[at]universite-paris-saclay.fr) with subject line "M1QDCSTERHPC REPORT Firstname1 LASTNAME1 Firstname2 LASTNAME2" (e.g., M1QDCSTERHPC REPORT Jean-François DURAND Julie DUFONT).
 * You should send your work no later than **08/05 Friday 23:59:59**
 
+**Tentative Outline**
+* Introduction
+* BLAS3 kernels (GEMM)
+* BLAS1 kernels
+* BLAS2 kernels
+* Testing
+* Conclusion
+
 3. Project presentation
-* Project presentations will take place together with other individual TER projects, sometime in May. You will receive an e-mail from the TER coordinator (Pablo Arnault) regarding this.
-* You will have 15 minutes to present + 5-10 minutes for questions.
-* In the presentation, you will not have time to present all your results. You should rather focus on your experience with AI-driven HPC development, what worked, what did not work, and lessons learned, together with some major results (of GEMM kernel for example).
+* Project presentations will take place together with other individual TER projects, on **13/05 Wednesday** at **13:30-17:30**. You will receive an e-mail from the TER coordinator (Pablo Arnault) regarding this.
+* You will have 15 minutes to present + 10 minutes for questions.
+* In the presentation, you will not have time to present all your results; just present major ones.
+* You should rather focus on your experience with AI-driven HPC development, what worked, what did not work, and lessons learned, together with some major results (for GEMM, BLAS1, and BLAS2)
+* Do not spend much time on fundamentals/basics since you are all doing the same project (what is BLAS, blas1 kernels, blas2 kernels, blas3 kernels, etc. use 1 slide max to show what we do)
+* It is OK to generate slides/results with AI; just make sure you know what you are doing! Do not present some AI-generated slop.
+* Normally, you would be reusing many of your slides from our weekly meetings with some trimming/polishing.
 
 # Tips and advices
 
